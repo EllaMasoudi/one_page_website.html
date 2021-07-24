@@ -2,7 +2,9 @@
 <html>
 <head>
     <meta charset="ut-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./css/one_page_website.css">
+    <script src="JS/One_page_website.js"></script>
 <title>Animals </title>
 </head>
 <body>
@@ -16,30 +18,75 @@
 <!--home-->
 <div id="home">
 </div>
-<!--photo-->
+<!--lightbox-->
+
+    
+
+ 
+        <!--photo-->
 <div id="photos">
 <h1>PHOTOS<h1>
-<div>
+
 
 <!--photo-container1-->
-<div>
-<img src="./images/thumb/thumbnail_1.jpg" alt="This is an image of a zebra" width="400" height="200">
-<div>
-<p>Zebra</p>
+<div class="row">
+
+<div class="column">
+    <h3>Zebra</h3>
+<img src="./images/thumb/thumbnail_1.jpg" alt="This is an image of a zebra" width="400" height="200" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
 </div>
-</div>
+
 <!--photo-container2-->
-<div>
-<img src="./images/thumb/thumbnail_2.jpg" alt="This is an image of a camel" width="400" height="200">
-<div>
-<p>Camel</p>
+
+<div class="column">
+    <h3>Cameles</h3>
+<img src="./images/thumb/thumbnail_2.jpg" alt="This is an image of a camel" width="400" height="200" onclick="openModal();currentSlide()" class="hover-shadow cursor">
+</div>
+
+</div>
+</div>
+
+
+
+<div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+  
+      <div class="mySlides">
+        <div class="numbertext">1 / 2</div>
+        <img src="./Images/Thumb/thumbnail_1.jpg" style="width:100%">
+      </div>
+      <div class="mySlides">
+        <div class="numbertext">2 / 2</div>
+        <img src="./Images/Thumb/thumbnail_2.jpg" style="width:100%">
+      </div>
+
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+
+      <div class="column">
+        <img class="demo cursor" src="./Images/Thumb/thumbnail_1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Zebra">
+      </div>
+
+
+      <div class="column">
+      <img class="demo cursor" src="./Images/Thumb/thumbnail_2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cameles">
+    </div>
+
 </div>
 </div>
 <!--video-->
 <iframe width="560" height="315" src="https://www.youtube.com/embed/eEaZvEZye84" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <p>Watch an amazing video about animals here!</p>
 </div>
-</div>
+
+
+
 <!--RSVP-->
 <section>
 <div id="contact">
